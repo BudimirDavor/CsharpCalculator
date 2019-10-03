@@ -1,11 +1,4 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Davor
- * Date: 3.10.2019.
- * Time: 16:00
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
+﻿
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -31,11 +24,29 @@ namespace DemoApi
 		}
 		void OKbtnClick(object sender, EventArgs e)
 		{
+			double Var1, Var2, Var3=0;
+			
+			Var1 = Convert.ToDouble(textBox1.Text);
+			Var2 = Convert.ToDouble(textBox2.Text);
+			
 			if (radioButton1.Checked==true)
 			{
-				textBox2.Text=textBox1.Text;
-				textBox1.Text="";
+				Var3=Var1+Var2;
 			}
+			if (radioButton2.Checked==true)
+			{
+				Var3=Var1-Var2;
+			}
+			if (radioButton3.Checked==true)
+			{
+				Var3=Var1*Var2;
+			}
+			if (radioButton4.Checked==true)
+			{
+				Var3=Var1/Var2;
+			}
+			
+			textBox3.Text = Var3.ToString();
 		}
 	}
 }
